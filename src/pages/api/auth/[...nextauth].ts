@@ -7,16 +7,17 @@ import { fauna } from "../../../services/fauna"
 
 export default NextAuth({
   // Configure one or more authentication providers
+  secret: process.env.NEXTAUTH_SECRET,
   providers: [
     GithubProvider({
       clientId: process.env.GITHUB_CLIENT_ID,
       clientSecret: process.env.GITHUB_CLIENT_SECRET
     }),
-    
+
   ],
   callbacks: {
-    async session({session}){
-      try{
+    async session({ session }) {
+      try {
         const userActiveSubscription = await fauna.query(
           q.Get(
             q.Intersection([
@@ -43,17 +44,17 @@ export default NextAuth({
           ...session,
           activeSubscription: userActiveSubscription
         }
-      }catch{
+      } catch {
         return {
           ...session,
           activeSubscription: null
         }
       }
     },
-    async signIn({user, account, profile,credentials}) {
+    async signIn({ user, account, profile, credentials }) {
       const email = user.email;
 
-      try{
+      try {
         await fauna.query(
           q.If(
             q.Not(
@@ -66,7 +67,7 @@ export default NextAuth({
             ),
             q.Create(
               q.Collection('users'),
-              { data: { email }}
+              { data: { email } }
             ),
             q.Get(
               q.Match(
@@ -77,10 +78,10 @@ export default NextAuth({
           )
         )
         return true
-      }catch{
+      } catch {
         return false
       }
-      
+
     },
   }
 
