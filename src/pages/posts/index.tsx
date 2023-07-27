@@ -27,7 +27,7 @@ export default function Posts({ posts }) {
                 <div className={styles.posts}>
                     {posts.map(post => (
                         // eslint-disable-next-line react/jsx-key
-                        <Link key={post.slug} href={`/posts/${post.slug}`}>
+                        <Link key={post.slug} href={`/posts/${post.slug}`} legacyBehavior>
                             <a>
                                 <time>{post.updatedAt}</time>
                                 <strong>{post.title}</strong>
