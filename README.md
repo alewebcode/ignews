@@ -4,7 +4,7 @@
 
 ## :rocket: Sobre a aplicação
 
-Projeto desenvolvido dentro do curso ignite da rocketseat.Se trata de uma aplicação em que o usuário se inscreve para poder acessar os posts cadastrados.
+Projeto desenvolvido dentro do curso ignite da Rocketseat.Se trata de uma aplicação em que o usuário se inscreve para poder acessar os posts cadastrados.
 
 ## :computer: Como executar
 
