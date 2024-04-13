@@ -4,7 +4,7 @@
 
 ## :rocket: Sobre a aplicação
 
-Projeto desenvolvido dentro do curso ignite da Rocketseat.A aplicação permite que o usuário se inscreva para obter permissão para acessar os posts cadastrados.
+Projeto desenvolvido dentro do curso ignite da Rocketseat.A aplicação permite que o usuário se inscreva e faça a assinatura para obter permissão para acessar os posts cadastrados.
 
 ## :computer: Como executar
 
