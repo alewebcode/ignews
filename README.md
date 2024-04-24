@@ -19,3 +19,4 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [Next.js](https://nextjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Chakra Ui](https://chakra-ui.com/)
+- [Fauna Db](https://fauna.com/)
